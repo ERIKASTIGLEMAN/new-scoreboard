@@ -7,6 +7,78 @@ html {
 }
 
 body {
+  font-family: sans-serif;
   margin: 0;
   min-height: 100%;
+  background-color: white;
+  color: #2b303a;
+}
+
+h1 {
+  text-transform: capitalize;
+  text-align: center;
+  font-family: Monospace;
+  margin: 1rem 0 3rem 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-decoration:underline;
+  
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+section {
+  min-width: 20rem;
+  
+  margin-bottom: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team1 {
+  border: thin solid #7c7c7c;
+  border-radius: 0.3rem;
+}
+
+.team2 {
+  border: thin solid #7c7c7c;
+  border-radius: 0.3rem;
+}
+
+section h2,
+section p {
+  text-align: center;
+  
+}
+
+section h3 {
+  margin: 1rem 0;
+  font-family: Monospace;
+  font-size: 3rem;
+}
+
+fieldset {
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+}
+
+fieldset input {
+  padding: 0.5rem;
+}
+
+fieldset i {
+  margin: .5rem;
+}
+
+fieldset i.add {
+  color: green;
+}
+
+fieldset i.subtract {
+  color: #f64545;
 }
