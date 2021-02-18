@@ -17,35 +17,60 @@ function handleTeamTwoInputField(event) {
 
 // Player One Score
 function teamOnePlus(event) {
+  if (teamOneScore >= 21) {
+    const wins = document.querySelector('.team1 h3').textContent
+    window.alert(`${wins} WINNER!`)
+
+    return
+  }
   teamOneScore++
+  document.querySelector('.team1 h3').textContent = teamOneScore
+}
+
+function teamOneSub(event) {
+  if (teamOneScore <= 0) {
+    return
+  }
+  teamOneScore--
   document.querySelector('.team1 h3').textContent = teamOneScore
 }
 
 // Player Two Score
 function teamTwoPlus(event) {
+  if (teamTwoScore >= 21) {
+    const wins = document.querySelector('.team2 h3').textContent
+    window.alert(`${wins} WINNER!`)
+
+    return
+  }
   teamTwoScore++
   document.querySelector('.team2 h3').textContent = teamTwoScore
 }
 
 function teamTwoSub(event) {
+  if (teamTwoScore <= 0) {
+    return
+  }
   teamTwoScore--
   document.querySelector('.team2 h3').textContent = teamTwoScore
 }
 
 function main() {
-  const teamTwoInput = document.querySelector('.team2 input')
-  teamTwoInput.addEventListener('input', handleTeamTwoInputField)
+  document
+    .querySelector('.team2 input')
+    .addEventListener('input', handleTeamTwoInputField)
 
-  const teamOneInput = document.querySelector('.team1 input')
-  teamOneInput.addEventListener('input', handleTeamOneInputField)
+  document
+    .querySelector('.team1 input')
+    .addEventListener('input', handleTeamOneInputField)
 
-  const teamOneScoreHeader = document.querySelector('#teamOneAdd')
-  teamOneScoreHeader.addEventListener('click', teamOnePlus)
+  document.querySelector('#teamOneAdd').addEventListener('click', teamOnePlus)
 
   document.querySelector('#teamTwoAdd').addEventListener('click', teamTwoPlus)
 
-  const teamTwoScoreHeader = document.querySelector('#teamTwoSub')
-  teamTwoScoreHeader.addEventListener('click', teamTwoSub)
+  document.querySelector('#teamTwoSub').addEventListener('click', teamTwoSub)
+
+  document.querySelector('#teamOneSub').addEventListener('click', teamOneSub)
 }
 
 document.addEventListener('DOMContentLoaded', main)
