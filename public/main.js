@@ -55,6 +55,10 @@ function teamTwoSub(event) {
   document.querySelector('.team2 h3').textContent = teamTwoScore
 }
 
+function reset(event) {
+  document.querySelector('h3').textContent = 0
+}
+
 function main() {
   document
     .querySelector('.team2 input')
@@ -71,6 +75,8 @@ function main() {
   document.querySelector('#teamTwoSub').addEventListener('click', teamTwoSub)
 
   document.querySelector('#teamOneSub').addEventListener('click', teamOneSub)
+
+  document.querySelector('button').addEventListener('click', reset)
 }
 
 document.addEventListener('DOMContentLoaded', main)

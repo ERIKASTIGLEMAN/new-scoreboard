@@ -39,6 +39,14 @@ section {
   flex-direction: column;
   align-items: center;
 }
+
+button{
+  display: flex;
+  flex-direction:row;
+  background-color: red;
+  
+}
+
 .team1 {
   border: thin solid #7c7c7c;
   border-radius: 0.3rem;
